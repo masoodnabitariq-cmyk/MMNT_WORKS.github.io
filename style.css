@@ -1,139 +1,86 @@
-.contact-page{
-max-width:1200px;
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 20%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
 }
 
-.contact-intro{
-max-width:850px;
-margin:0 auto 45px;
-text-align:center;
-font-size:20px;
-color:#d8d0bd;
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
 }
-
-.contact-wrapper{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:28px;
-margin-top:35px;
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
 }
+</style>
+</head>
+<body style="font-family:Verdana;">
 
-.contact-card{
-background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
-border:1px solid rgba(212,175,55,.28);
-border-radius:28px;
-padding:34px;
-box-shadow:0 30px 70px rgba(0,0,0,.35);
-position:relative;
-overflow:hidden;
-}
+<div style="background-color:#f1f1f1;padding:15px;">
+  <h1>Cinque Terre</h1>
+  <h3>Resize the browser window</h3>
+</div>
 
-.contact-card::before{
-content:"";
-position:absolute;
-top:-80px;
-right:-80px;
-width:180px;
-height:180px;
-background:radial-gradient(circle,rgba(212,175,55,.22),transparent 70%);
-}
+<div style="overflow:auto">
+  <div class="menu">
+    <div class="menuitem">The Walk</div>
+    <div class="menuitem">Transport</div>
+    <div class="menuitem">History</div>
+    <div class="menuitem">Gallery</div>
+  </div>
 
-.contact-card h2,
-.contact-footer-card h2{
-color:#d4af37;
-font-size:30px;
-margin-top:0;
-}
+  <div class="main">
+    <h2>The Walk</h2>
+    <p>The walk from Monterosso to Riomaggiore will take you approximately two hours, give or take an hour depending on the weather conditions and your physical shape.</p>
+    <img src="img_5terre.jpg" style="width:100%">
+  </div>
 
-.contact-item{
-padding:18px 0;
-border-bottom:1px solid rgba(212,175,55,.18);
-}
+  <div class="right">
+    <h2>What?</h2>
+    <p>Cinque Terre comprises five villages: Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore.</p>
+    <h2>Where?</h2>
+    <p>On the northwest cost of the Italian Riviera, north of the city La Spezia.</p>
+    <h2>Price?</h2>
+    <p>The Walk is free!</p>
+  </div>
+</div>
 
-.contact-item:last-child{
-border-bottom:none;
-}
 
-.contact-label{
-display:block;
-font-size:13px;
-letter-spacing:3px;
-text-transform:uppercase;
-color:#d4af37;
-margin-bottom:6px;
-}
+<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> This web page is a part of a demonstration of fluid web design made by w3schools.com. Resize the browser window to see the content respond to the resizing.</div>
 
-.contact-link{
-color:#f5f1e8;
-text-decoration:none;
-font-size:19px;
-font-weight:600;
-transition:.3s ease;
-word-break:break-word;
-}
+</body>
+</html>
 
-.contact-link:hover{
-color:#d4af37;
-text-shadow:0 0 18px rgba(212,175,55,.35);
-}
-
-.contact-item p{
-margin:0;
-font-size:19px;
-color:#f5f1e8;
-}
-
-.accent-card{
-border-color:rgba(212,175,55,.45);
-}
-
-.contact-list{
-padding-left:20px;
-margin:0;
-}
-
-.contact-list li{
-margin-bottom:14px;
-font-size:18px;
-color:#e8e1d2;
-}
-
-.contact-footer-card{
-margin-top:35px;
-background:rgba(0,0,0,.38);
-border:1px solid rgba(212,175,55,.32);
-border-radius:28px;
-padding:38px;
-text-align:center;
-box-shadow:0 30px 70px rgba(0,0,0,.35);
-}
-
-.contact-footer-card p{
-max-width:850px;
-margin:0 auto 25px;
-font-size:19px;
-color:#d8d0bd;
-}
-
-@media(max-width:700px){
-
-.contact-intro{
-font-size:17px;
-text-align:left;
-}
-
-.contact-card,
-.contact-footer-card{
-padding:24px;
-}
-
-.contact-card h2,
-.contact-footer-card h2{
-font-size:24px;
-}
-
-.contact-link,
-.contact-item p{
-font-size:17px;
-}
-
-}
